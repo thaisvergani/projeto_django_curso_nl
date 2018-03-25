@@ -1,0 +1,33 @@
+{% extends 'carros/base.html' %}
+{% block title %}
+Fabricantes
+{% endblock %}
+
+{% block content %}
+
+    <!-- isso é um comentário no HTML -->
+    {% if fabricantes %}
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nome do fabricante</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fabricante in fabricantes %}
+                <tr>
+                    <th>{{forloop.counter }}</th>
+                    <th>
+                        {{fabricante.nome}}
+                    </th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% else %}
+        <h3>Nenhum fabricante cadastrado</h3>
+    {% endif %}
+
+{% endblock %}

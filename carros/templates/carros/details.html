@@ -1,0 +1,12 @@
+{% extends 'carros/base.html' %}
+
+{% block content %}
+
+    <h1>
+    Nome: {{item.name}}
+    </h1>
+    <p>Preço:{{item.price}}</p>
+    <p>Ano:{{item.year}}</p>
+    <p>Fabricante:{{item.fabricante.nome}}</p>
+</div>
+{% endblock %}
